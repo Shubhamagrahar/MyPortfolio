@@ -5,11 +5,19 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
+.lead{
+  font-family: cursive;
+  margin-top: 25px;
+}
+.writing{
+  font-family: cursive;
+  margin-top: 8px;
+}
 
 body {
   padding: 0;
@@ -150,7 +158,7 @@ header nav .search i {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 50vh;
+  margin-top: 40vh;
 }
 
 .socials .line {
@@ -395,7 +403,8 @@ header nav .search i {
 .lighter-div {
   background-color: #3d3e42;
   width: 100vw;
-  /* height: 105vh; */
+  height: 105vh;
+  margin-top: 50px;
   padding: 10vh 10vw;
   display: flex;
   flex-direction: column;
@@ -490,8 +499,10 @@ header nav .search i {
 .myimage{
     margin-right: 60px;
     margin-top: 100px;
-    height: 110%;
-    filter: grayscale(150%) brightness(90%);
+    margin-left: 100px;
+    
+    height: 120%;
+    filter: grayscale(70%) brightness(90%);
    
 }
 .navlogo{
@@ -511,6 +522,7 @@ header nav .search i {
   position: sticky;
   top: 0;
   background-color: #34353a; 
+  margin-left: 50px;
 }
 .navbar ul {
   list-style: none;
@@ -518,6 +530,7 @@ header nav .search i {
   display: flex;
   gap: 25px;
   margin-right: 10px;
+  align-items: center;
 }
 
 
@@ -565,5 +578,78 @@ header nav .search i {
 .project_heading{
   color: #416ba5;
   
+}
+.glitch-container{
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+}
+.glitch-text{
+  font-size: 3em;
+  text-transform: uppercase;
+  color: aliceblue;
+  position: relative;
+  display: inline-block;
+  font-family: cursive;
+
+}
+.glitch-text ::before, .glitch-text::after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0,auto,auto,0);
+  animation: glitch 2s infinite linear alternate-reverse;
+
+}
+.glitch-text-name{
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #2d62ac;
+  position: relative;
+  display: inline-block;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.glitch-text-name ::before, .glitch-text-name::after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0,auto,auto,0);
+  animation: glitch 2s infinite linear alternate-reverse;
+
+}
+@keyframes glitch{
+  0%{
+      transform: translate(-2px, -2px);
+  }
+  25%{
+      transform: translate(2px,2px);
+  }
+  50%{
+      transform: translate(-2px,-1px);
+  }
+  75%{
+      transform: translate(-1px,-1px);
+  }
+  100%{
+      transform: translate(-2px, -2px);
+  }
+
+}
+.changing-text{
+  font-size: 70px;
+  color: #2d62ac;
+  font-family: cursive;
+}
+.text{
+  font-size: 60px;
+  color: white;
 }
 
